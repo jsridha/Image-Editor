@@ -1,0 +1,92 @@
+Launch Instructions for GUI:
+
+- To run program using the javax Swing GUI, simply launch ImageEditor via the command line with no arguments.
+  Then, interact with the program via the buttons on the right hand side. Images will be rendered in
+  the center of the window, with histograms of each channel and the intensity of the current
+  image visible on the left hand side.
+
+- Button Commands Supported
+    - Load
+      - Opens a file window to read in a file to the program. Prompts user for name of image.
+        and stores result in model at provided name.
+    - Save
+      - Prompts user for filepath and saves current image rendered to location.
+        and stores result in model at provided name.
+    - Visualize
+      - Asks user for parameter then transforms currently rendered image
+        and stores result in model at provided name.
+    - Brighten
+      - Asks user for value to brighten/darken by then transforms currently rendered image
+        and stores result in model at provided name.
+    - Sepia
+      - Transforms currently rendered image and stores result in model at provided name.
+    - Greyscale
+      - Transforms currently rendered image and stores result in model at provided name.
+    - Blur
+      - Transforms currently rendered image and stores result in model at provided name.
+    - Sharpen
+      - Transforms currently rendered image and stores result in model at provided name.
+    - Render new image
+      - Takes name of image and attempts to render the image stored in the model under that name.
+
+___________________________________________________________________________________________________
+
+- To instead run the program entirely in the terminal, launch ImageEditor.java via the command line 
+  and include the first image you would like to load into the program (see syntax for the load 
+  command below). Further commands for transformations and file I/O can be similarly entered via the
+  command line. 
+
+List of Accepted Commands and Example Syntax
+
+- Load
+  - syntax: "load filepath imageID"
+  - Ex: "load example.ppm example" or "load ex2.jpg ex2"
+  - Loads the image file at the specified file path into the model, assigning the provided imageID
+    as the identifier for the image.
+
+- Brighten
+  - syntax: "brighten value imageID newImageID"
+  - Ex: "brighten 15 example example-bright" or "brighten -15 example example-dark"
+  - Brightens or darkens the image contained at imageID by the value passed, storing the result in
+    the model as newImageID. If passed a positive value performs brightening, otherwise darkens image.
+    clamps values at 255.
+
+- Visualize
+  - syntax: "channel-component imageID newImageID"
+  - Ex: "red-component example example-red", "blue-component example example-blue",
+        "green-component example example-green", "luma-component example example-luma"
+        "value-component example example-value", "intensity-component example example-intensity"
+  - Visualizes the image contained at imageID along the channel specified, storing the result in
+    the model as newImageID.
+
+- Blur
+  - syntax: "blur imageID newImageID"
+  - Ex: "blur ex2 example-blur"
+  - Brightens or darkens the image contained at imageID by the value passed, storing the result in
+    the model as newImageID. If passed a positive value performs brightening, otherwise darkens image.
+    clamps values at 255.
+
+- Sharpen
+  - syntax: "sharpen imageID newImageID"
+  - Ex: "sharpen ex2 example-sharp"
+  - Brightens or darkens the image contained at imageID by the value passed, storing the result in
+    the model as newImageID. If passed a positive value performs brightening, otherwise darkens image.
+    clamps values at 255.
+
+- Greyscale
+  - syntax: "greyscale imageID newImageID"
+  - Ex: "greyscale ex2 example-greyscale"
+  - Brightens or darkens the image contained at imageID by the value passed, storing the result in
+    the model as newImageID. If passed a positive value performs brightening, otherwise darkens image.
+    clamps values at 255.
+
+- Sepia
+  - syntax: "sepia imageID newImageID"
+  - Ex: "sepia ex2 example-sepia"
+  - Brightens or darkens the image contained at imageID by the value passed, storing the result in
+    the model as newImageID. If passed a positive value performs brightening, otherwise darkens image.
+    clamps values at 255.
+
+- Quit
+  - syntax: "q", "quit", "Q", "Quit", etc.
+  - Ends the program,

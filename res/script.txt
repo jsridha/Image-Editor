@@ -1,0 +1,40 @@
+load example.ppm example
+load ex2.jpg ex2
+
+brighten 15 example example-bright
+save example-bright.ppm example-bright
+
+brighten -15 example example-dark
+save example-dark.ppm example-dark
+
+red-component example example-red
+save example-red.ppm example-red
+
+blue-component example example-blue
+save example-blue.ppm example-blue
+
+green-component example example-green
+save example-green.ppm example-green
+
+luma-component example example-luma
+save example-luma.ppm example-luma
+
+value-component example example-value
+save example-value.ppm example-value
+
+intensity-component example example-intensity
+save example-intensity.ppm example-intensity
+
+blur ex2 example-blur
+save example-blur.jpg example-blur
+
+sharpen ex2 example-sharpen
+save example-sharpen.jpg example-sharpen
+
+sepia ex2 example-sepia
+save example-sepia.jpg example-sepia
+
+greyscale ex2 example-greyscale
+save example-greyscale.jpg example-greyscale
+
+quit
