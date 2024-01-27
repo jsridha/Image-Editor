@@ -15,7 +15,7 @@ Summary of Project
    the program using a -file flag, or can interact using the command line by applying a -text
    flag.
 
-----------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
 
 Project Structure:
 - src
